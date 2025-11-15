@@ -1,0 +1,58 @@
+/* ------------------------- /Remove default border ------------------------- */
+.react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------------- Make only navigation text bigger (in px) ---------------- */
+.react-calendar__navigation button,
+.react-calendar__navigation__label {
+  font-size: 20px; /* bigger text in px */
+  font-weight: bold;
+  color: black;
+}
+
+/* --------------------------- Remove tile border --------------------------- */
+.react-calendar__tile {
+  border: none !important;
+  background-color: #f0f0f0; 
+  color: #000;
+}
+
+ /* -------------------- Current date style (always black) ------------------- */
+.react-calendar__tile--now {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+ /* -------------------- Highlight selected date in black -------------------- */
+.react-calendar__tile--active {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 4px;
+}
+
+ /* ------- Hover effect for tiles: gray-100 background with black text ------ */
+.react-calendar__tile:hover {
+  background-color: #f3f3f3; 
+  color: black;
+  border-radius: 4px;
+}
+
+/* ------------------ Highlighted dates using custom class ------------------ */
+.highlight-black {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* ------------------------ No scroll bar show in div ----------------------- */
+.scrollable-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;             
+}

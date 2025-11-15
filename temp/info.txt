@@ -1,0 +1,16 @@
+used react.js, tailwind css, node.js, express.js and mongodb
+
+
+download project on github
+install node module in folder frontend and backend
+npm install
+
+
+Run backend
+cd backend
+npm run dev
+
+
+Run frontend
+cd frontend
+npm run dev
