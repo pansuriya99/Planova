@@ -114,6 +114,7 @@ exports.updateGoal = async (req, res) => {
   try {
     const updatedGoal = await Goal.findOneAndUpdate(
       { _id: req.params.id, userId: req.user.id },
+      { $set: req.body }, // IMPORTANT — apply incoming updates
       { new: true, runValidators: true }
     );
 
@@ -128,9 +129,10 @@ exports.updateGoal = async (req, res) => {
     });
   } catch (error) {
     console.error("updateGoal error:", error);
-    res
-      .status(500)
-      .json({ message: "Failed to update goal", error: error.message });
+    res.status(500).json({
+      message: "Failed to update goal",
+      error: error.message,
+    });
   }
 };
 
